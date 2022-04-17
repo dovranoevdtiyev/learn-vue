@@ -1,18 +1,26 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <ul>
+      <li v-for="(product, i) in products" :key="i">
+        <router-link :to="'/products/' + product.id">{{
+          product.name
+        }}</router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
   name: "HomeView",
-  components: {
-    HelloWorld,
+  data() {
+    return {
+      products: [
+        { id: 1, name: "product 1" },
+        { id: 2, name: "product 2" },
+        { id: 3, name: "product 3" },
+      ],
+    };
   },
 };
 </script>

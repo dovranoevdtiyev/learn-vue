@@ -1,3 +1,6 @@
 <template>
-  <h1 align="center">richxcame</h1>
+  <nav>
+    <router-link to="/">Home</router-link>
+  </nav>
+  <router-view />
 </template>
