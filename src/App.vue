@@ -1,3 +1,3 @@
 <template>
-  <h1 align="center">Hello world</h1>
+  <h1 align="center">Hello World</h1>
 </template>
